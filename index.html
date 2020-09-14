@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!---https://www.w3schools.com/css/css_website_layout.asp--->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rock, Paper, Scissors</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+        .header {
+            background-color: #F1F1F1;
+            padding: 20px;
+            text-align: center;
+        }
+        /* Create three unequal columns that floats next to each other */
+        .column {
+            float: left;
+            padding: 10px;
+            text-align: center;
+        }
+        /* Left and right column */
+        .column.side {
+            width: 25%;
+        }
+        /* Middle column */
+        .column.middle {
+            width: 50%;
+        }
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column.side, .column.middle {
+                width: 100%;
+            }
+        }
+        .footer {
+            background-color: #F1F1F1;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>Rock, Paper, Scissors</h1>
+    <p>Remember: Rock beats Scissors, Scissors beats Paper, Paper beats Rock</p>
+</div>
+
+<div class="row">
+    <div class="column side">
+        Player Column
+    </div>
+    <div class="column middle">
+        Game Column
+    </div>
+    <div class="column side">
+        CPU Column
+    </div>
+</div>
+
+<div class="footer">
+    Social Links
+</div>
+
+</body>
+</html>
